@@ -17,7 +17,21 @@ export default class Form extends Component {
         return (
 
             <div className='form'>
-                Form
+                
+                <div className='img-preview'> IMG Preview </div>
+                <div className='input-boxes'>
+                    <p className='form-element'>Image URL:</p>
+                    <input className='form-element' type='text' />
+                    <p className='form-element'>Product Name:</p>
+                    <input className='form-element' type='text' />
+                    <p className='form-element'>Price:</p>
+                    <input className='form-element' type='text' />
+                    
+                </div>
+                <div className='buttons'>
+                        <button> Cancel </button>
+                        <button> Add to Inventory </button>   
+                </div>
             </div>
 
         )

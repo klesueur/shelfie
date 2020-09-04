@@ -6,8 +6,8 @@ export default class Header extends Component {
 
         return (
 
-            <div className='header'>
-                Header / Shelfie
+            <div className='header-shelfie'>
+                <h1> SHELFIE </h1>
             </div>
 
         )
