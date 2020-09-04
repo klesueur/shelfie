@@ -1,15 +1,13 @@
 import React, {Component} from 'react'
 
-export default class Product extends Component {
-
+class Product extends Component {
     render() {
-
         return (
-
             <div>
-                Product
+                Child component: Product 
             </div>
-
         )
     }
 }
+
+export default Product

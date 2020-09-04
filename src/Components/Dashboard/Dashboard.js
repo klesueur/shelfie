@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Product from '../Product/Product'
 
 export default class Dashboard extends Component {
 
@@ -8,6 +9,7 @@ export default class Dashboard extends Component {
 
             <div>
                 Dashboard
+                <Product />
             </div>
 
         )

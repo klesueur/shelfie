@@ -5,16 +5,26 @@ import Form from './Components/Form/Form'
 import Header from './Components/Header/Header'
 
 
-export default class App extends Component {
+class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      inventory: [],
+    }
+  }
 
   render() {
 
     return (
-
       <div>
-
+        App
+        <Dashboard />
+        <Form />
+        <Header />
       </div>
-      
     )
   }
 }
+
+export default App 
