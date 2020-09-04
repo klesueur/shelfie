@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../../index.css'
 
 export default class Form extends Component {
     constructor() {
@@ -15,7 +16,7 @@ export default class Form extends Component {
 
         return (
 
-            <div>
+            <div className='form'>
                 Form
             </div>
 
