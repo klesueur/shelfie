@@ -10,19 +10,26 @@ export default class Form extends Component {
             price: 0,
             imgurl: ''
         }
+        this.handleChange = this.handleChange.bind(this)
     }
 
 
-    handleImg(URL) {
-        this.setState({ name: URL })
-    }
+    // handleImg(url) {
+    //     this.setState({ name: url })
+    // }
 
-    handleName(name) {
-        this.setState({ price: name })
-    }
+    // handleName(name) {
+    //     this.setState({ price: name })
+    // }
 
-    handlePrice(price) {
-        this.setState({ imgurl: price })
+    // handlePrice(price) {
+    //     this.setState({ imgurl: price })
+    // }
+
+    handleChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
     }
 
     handleAddButton() {
@@ -33,37 +40,40 @@ export default class Form extends Component {
 
     }
 
+    handleSubmit(e){
+        e.preventDefault()
+        const {name, price, imgurl} = this.state
+        this.props.addProduct(name, price, imgurl)
+    }
+
 
     render() {
 
         return (
 
-            <div className='form'>
+            <form onSubmit={e => this.handleSubmit(e)} className='form'>
                 
                 <div className='img-preview'> IMG Preview </div>
                 <div className='input-boxes'>
 
-                    <p className='form-element'>Image URL:</p>
+                    <p className='form-element'> Image URL: </p>
                     <input className='form-element'
-                            onChange={e => this.handleImg(e.target.value)}
-                            type='text' />
+                           onChange={this.handleChange} name='imageurl' />
 
-                    <p className='form-element'>Product Name:</p>
+                    <p className='form-element'> Product Name: </p>
                     <input className='form-element' 
-                            onChange={e => this.handleName(e.target.value)}
-                            type='text' />
+                           onChange={this.handleChange} name='name' />
 
-                    <p className='form-element'>Price:</p>
+                    <p className='form-element'> Price: </p>
                     <input className='form-element' 
-                            onChange={e => this.handlePrice(e.target.value)}
-                            type='text' />
+                           onChange={this.handleChange} name='price' />
                     
                 </div>
                 <div className='buttons'>
                         <button onClick={this.handleAddButton}> Cancel </button>
-                        <button onClick={this.handleCancelButton}> Add to Inventory </button>   
+                        <button type='submit' onClick={this.handleCancelButton}> Add to Inventory </button>   
                 </div>
-            </div>
+            </form>
 
         )
     }
