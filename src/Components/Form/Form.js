@@ -37,7 +37,11 @@ export default class Form extends Component {
     }
 
     handleCancelButton() {
-
+        this.setState({
+            name: '',
+            price: 0,
+            imgurl: ''
+        })
     }
 
     handleSubmit(e){
