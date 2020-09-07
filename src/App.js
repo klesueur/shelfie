@@ -27,8 +27,8 @@ class App extends Component {
   // }
 
   render() {
-    // // const productDisplay = this.state.inventory.map(function (product) {
-    // //   return </*ComponentName*/ key={product.id} product={product}
+    // const productDisplay = this.state.inventory.map(product => {
+    // return <Dashboard />
     // })
 
     return (
@@ -38,7 +38,8 @@ class App extends Component {
         </div>
 
         <div className='body'>
-          <Dashboard />
+          <Dashboard inventory={this.state.inventory} />
+          
           <Form addProduct={this.addProduct} />
         </div>
 
