@@ -11,6 +11,7 @@ export default class Form extends Component {
             imgurl: ''
         }
         this.handleChange = this.handleChange.bind(this)
+        this.handleCancelButton = this.handleCancelButton.bind(this)
     }
 
 
@@ -32,9 +33,9 @@ export default class Form extends Component {
         })
     }
 
-    handleAddButton() {
+    // handleAddButton() {
 
-    }
+    // }
 
     handleCancelButton() {
         this.setState({
@@ -55,7 +56,7 @@ export default class Form extends Component {
 
         return (
 
-            <form onSubmit={e => this.handleSubmit(e)} className='form'>
+            <form  className='form'>
                 
                 <div className='img-preview'> IMG Preview </div>
                 <div className='input-boxes'>
@@ -74,8 +75,8 @@ export default class Form extends Component {
                     
                 </div>
                 <div className='buttons'>
-                        <button onClick={this.handleAddButton}> Cancel </button>
-                        <button type='submit' onClick={this.handleCancelButton}> Add to Inventory </button>   
+                        <button onClick={this.handleCancelButton}> Cancel </button>
+                        <button type='submit' onSubmit={e => this.handleSubmit(e)} > Add to Inventory </button>   
                 </div>
             </form>
 
