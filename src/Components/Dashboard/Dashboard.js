@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../../App.css'
 import Product from '../Product/Product'
 import App from '../../App.js'
 
