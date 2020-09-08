@@ -33,9 +33,6 @@ export default class Form extends Component {
         })
     }
 
-    // handleAddButton() {
-
-    // }
 
     handleCancelButton() {
         this.setState({

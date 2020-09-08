@@ -5,9 +5,12 @@ import App from '../../App.js'
 
 
 export default class Dashboard extends Component {
+    constructor(props) {
+        super()
+    }
 
     render() {
-        const productDisplay = this.state.inventory.map(product => {
+        const productDisplay = this.props.inventory.map(product => {
             return <Product  />
             })
 

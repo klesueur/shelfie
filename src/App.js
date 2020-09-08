@@ -10,26 +10,13 @@ class App extends Component {
     super()
 
     this.state = {
-      inventory: [],
-    }
-
-    /*this.addProduct = this.addProduct.bind(this)*/
-  }
-
-  // addProduct(name, price, imgurl) {
-  //   const id = this.state.inventory[this.state.inventory.length -1].id + 1
-  //   const newProduct = {id, name, price, imgurl}
-  //   const newArr = [...this.state.inventory, newProduct]
-
-  //   this.setState({
-  //     inventory: newArr,
-  //   })
-  // }
+      inventory: [
+        'dummy1', 'dummy2', 'dummy3'
+      ]
+    }  
+ }
 
   render() {
-    // const productDisplay = this.state.inventory.map(product => {
-    // return <Dashboard />
-    // })
 
     return (
       <div>
