@@ -15,19 +15,19 @@ class App extends Component {
         {
           id: 0,
           name: 'Boots',
-          price: 100,
+          price: 150,
           imgurl: 'https://images.dsw.com/is/image/DSWShoes/443190_100_ss_01?$pdp-image$'
         },
         {
           id: 1,
           name: 'Pendant Necklace',
-          price: 200,
+          price: 100,
           imgurl: 'https://i.etsystatic.com/9939995/d/il/a25557/1056027951/il_340x270.1056027951_pcc6.jpg'
         },
         {
           id: 2,
           name: 'Jersey',
-          price: 301,
+          price: 300,
           imgurl: 'https://images-na.ssl-images-amazon.com/images/I/61OxzF0Ub-L._AC_UL1400_.jpg'
         }
       ]

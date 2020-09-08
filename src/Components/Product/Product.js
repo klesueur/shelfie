@@ -11,10 +11,10 @@ class Product extends Component {
             <div className='product-item'>
         
                 <img src={product.imgurl} className='product-image' alt={product.name} />
-                
-                <div>
-                    <p>{product.name}</p>
-                    <p>{product.price}</p>
+
+                <div className='product-details'>
+                    <p className='product-name'>{product.name}</p>
+                    <p className='product-price'>{product.price}</p>
                 </div>
 
             </div>
