@@ -5,14 +5,13 @@ import Form from './Components/Form/Form'
 import Header from './Components/Header/Header'
 
 
+
 class App extends Component {
   constructor() {
     super()
 
     this.state = {
-      inventory: [
-        'dummy1', 'dummy2', 'dummy3'
-      ]
+      inventory: []
     }  
  }
 
@@ -27,7 +26,9 @@ class App extends Component {
         <div className='body'>
           <Dashboard inventory={this.state.inventory} />
           
-          <Form addProduct={this.addProduct} />
+          <Form /*addProduct={this.addProduct}*/
+          />
+
         </div>
 
       </div>
