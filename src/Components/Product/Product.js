@@ -6,10 +6,17 @@ import '../../App.css'
 class Product extends Component {
     render() {
         console.log(this.props)
+        const {product} = this.props
         return (
-            <div>
-                I am the Child PRODUCT Component.
-                <img src={this.props.product.imgurl} className='product-image' alt={this.props.product.name} />
+            <div className='product-item'>
+        
+                <img src={product.imgurl} className='product-image' alt={product.name} />
+                
+                <div>
+                    <p>{product.name}</p>
+                    <p>{product.price}</p>
+                </div>
+
             </div>
         )
     }
