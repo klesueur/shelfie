@@ -11,7 +11,26 @@ class App extends Component {
     super()
 
     this.state = {
-      inventory: []
+      inventory: [
+        {
+          id: 0,
+          name: 'Boots',
+          price: 100,
+          imgurl: 'https://images.dsw.com/is/image/DSWShoes/443190_100_ss_01?$pdp-image$'
+        },
+        {
+          id: 1,
+          name: 'Pendant Necklace',
+          price: 200,
+          imgurl: 'https://i.etsystatic.com/9939995/d/il/a25557/1056027951/il_340x270.1056027951_pcc6.jpg'
+        },
+        {
+          id: 2,
+          name: 'Jersey',
+          price: 301,
+          imgurl: 'https://images-na.ssl-images-amazon.com/images/I/61OxzF0Ub-L._AC_UL1400_.jpg'
+        }
+      ]
     }  
  }
 
