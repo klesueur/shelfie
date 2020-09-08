@@ -9,8 +9,9 @@ const app = express()
 
 app.use(express.json())
 const port = 4000
+
 // const baseUrl = ''
-// app.get()
+app.get('/api/inventory', controller.getProducts)
 // app.post()
 // app.put() <-- not listed in plans
 // app.delete() <-- not listed in plans
