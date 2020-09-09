@@ -8,7 +8,8 @@ export default class Header extends Component {
         return (
 
             <div className='header-shelfie'>
-                <h1> SHELFIE </h1>
+                <img className='shelfie-logo' src='https://raw.githubusercontent.com/DevMountain/simulation-1/master/assets/shelfie_icon.png' alt='shelfie-logo'/>
+                <h1 className='shelfie-name'> SHELFIE </h1>
             </div>
 
         )
