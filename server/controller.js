@@ -9,11 +9,9 @@ module.exports = {
     },
 
     addProduct: (req, res) => {
-        console.log(name, price, imgurl)
         const db = req.app.get('db')
         const {name, price, imgurl} = req.body
         
-
         db.create_product([name, price, imgurl]).then((product) => {
             res.status(200).send(product)
         }).catch(err => {console.log(err)})
