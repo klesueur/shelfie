@@ -15,7 +15,7 @@ module.exports = {
         
         db.create_product([name, price, imgurl]).then(newProduct => {
             res.status(200).send(newProduct)
-        }).catch(err => {console.log(err)})
+        }).catch(err => console.log(err))
     },
 }
 

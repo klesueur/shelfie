@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import '../../App.css'
+import axios from 'axios'
 
 export default class Form extends Component {
     constructor() {
@@ -42,10 +43,22 @@ export default class Form extends Component {
         })
     }
 
-    handleSubmit(e){
+    handleSubmit(e) {
         e.preventDefault()
         const {name, price, imgurl} = this.state
-        this.props.addProduct(name, price, imgurl)
+        this.props.updateInventory(name, price, imgurl)
+    }
+
+    addProduct(newProduct) {
+        axios.post('/api/product', newProduct)
+        .then(res => {
+            this.setState({
+                name: res.data,
+                price: res.data,
+                imgurl: res.data
+            })
+        })
+        .catch(err => console.log(err))
     }
 
 
