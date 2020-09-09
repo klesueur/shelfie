@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios' 
 import './App.css';
 import Dashboard from './Components/Dashboard/Dashboard'
 import Form from './Components/Form/Form'
@@ -15,7 +16,16 @@ class App extends Component {
     }  
  }
 
- componentDidMount() {}
+ componentDidMount() {
+  console.log('I am mounted!!')
+   axios.get('/api/inventory').then(res => {
+     console.log(res.data)
+     this.setState({
+       inventory: res.data,
+     })
+   })
+   
+ }
 
 
 componentDidUpdate() {}
