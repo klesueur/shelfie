@@ -12,7 +12,7 @@ const port = 4000
 
 // const baseUrl = ''
 app.get('/api/inventory', controller.getProducts)
-// app.post()
+app.post('/api/product', controller.addProduct)
 // app.put() <-- not listed in plans
 // app.delete() <-- not listed in plans
 

@@ -7,6 +7,7 @@ import Header from './Components/Header/Header'
 
 
 
+
 class App extends Component {
   constructor() {
     super()
@@ -17,7 +18,7 @@ class App extends Component {
  }
 
  componentDidMount() {
-  console.log('I am mounted!!')
+  // console.log('I am mounted!!')
    axios.get('/api/inventory').then(res => {
      console.log(res.data)
      this.setState({
@@ -28,7 +29,11 @@ class App extends Component {
  }
 
 
-componentDidUpdate() {}
+// componentDidUpdate() {
+//   axios.post('/api/product').then((res) => {
+
+//   })
+// }
 
 
   render() {
